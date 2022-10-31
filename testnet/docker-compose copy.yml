@@ -1,0 +1,80 @@
+version: '3.9'
+services:
+    el-node:
+        image: p202io/el-node:latest
+        container_name: el-node
+        restart: always
+        volumes:
+            - ./data/el-node:/data
+        networks:
+            - node
+        ports:
+            - "30303:30303"
+            - "30303:30303/udp"
+            #- "6060:6060"
+            - "8545:8545"
+            #- "8546:8546"
+            - "8551:8551"
+        command:
+            - --p202-testnet
+            - --config=/data/config.yml
+            - --datadir=/data
+            - --gcmode=archive
+            - --http
+
+    cl-node:
+        image: p202io/cl-node:latest
+        container_name: cl-node
+        restart: always
+        volumes:
+            - ./data/cl-node:/data
+            - ./data/el-node:/el-node
+        networks:
+            - node
+            - validator
+        ports:
+            - "3500:3500"
+            - "4000:4000"
+            #- "6060:6060"
+            #- "8080:8080"
+            - "12000:12000/udp"
+            - "13000:13000"
+        command:
+            - --p202-testnet
+            - --accept-terms-of-use
+            - --config-file=/data/config.yml
+            - --datadir=/data
+            - --execution-endpoint=/el-node/geth.ipc
+            - --jwt-secret=/el-node/geth/jwtsecret
+        depends_on:
+            - el-node
+
+    cl-validator:
+        image: p202io/cl-validator:latest
+        container_name: cl-validator
+        restart: always
+        volumes:
+            - ./data/cl-validator:/data
+        networks:
+            - validator
+        #ports:
+            #- "6060:6060"
+            #- "7000:7000"
+            #- "7500:7500"
+            #- "8081:8081"
+        command:
+            - --p202-testnet
+            - --accept-terms-of-use
+            - --beacon-rpc-gateway-provider=cl-node:3500
+            - --beacon-rpc-provider=cl-node:4000
+            - --config-file=/data/config.yml
+            - --datadir=/data
+            - --wallet-dir=/data/wallet
+            - --wallet-password-file=/data/password.txt
+        depends_on:
+            - el-node
+            - cl-node
+
+networks:
+    node:
+    validator:
