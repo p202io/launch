@@ -22,7 +22,7 @@ enable-debug-rpc-endpoints: true
 subscribe-all-subnets: true
 
 enable-upnp: true
-min-sync-peers: 0
+min-sync-peers: 3
 #p2p-priv-key: /p202/mainnet/data/cl-node/p2p-priv-key.txt
 p2p-local-ip: 0.0.0.0
 #p2p-host-ip: ?
