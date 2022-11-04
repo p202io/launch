@@ -1,13 +1,13 @@
-# sudo nano /p202/testnet/data/cl-node/config.yml
+# sudo nano /data/cl-node/config.yml
 # Configuration file for Prysm beacon-chain
 
 # datadir: Location of blockchain data
-datadir: /p202/testnet/data/cl-node
+datadir: /data/cl-node
 
 # http-web3provider: ETH1 API endpoint, eg. http://localhost:8545 for a local geth service on the default port
-#execution-endpoint: /p202/testnet/data/el-node/geth.ipc
+#execution-endpoint: /data/el-node/geth.ipc
 execution-endpoint: http://127.0.0.1:8551
-jwt-secret: /p202/testnet/data/el-node/geth/jwtsecret
+jwt-secret: /data/el-node/geth/jwtsecret
 
 p202-testnet: true
 accept-terms-of-use: true
@@ -22,21 +22,22 @@ subscribe-all-subnets: true
 
 enable-upnp: true
 min-sync-peers: 3
-#p2p-priv-key: /p202/testnet/data/cl-node/p2p-priv-key.txt
+#p2p-priv-key: /data/cl-node/p2p-priv-key.txt
 p2p-local-ip: 0.0.0.0
-#p2p-host-ip: ?
-#p2p-host-dns: ?
+#p2p-host-ip: 62.112.8.53
+#p2p-host-dns: testnet.p202.io
 grpc-gateway-host: 0.0.0.0
 rpc-host: 0.0.0.0
 monitoring-host: 0.0.0.0
 
 
-#relay-node: http://185.180.223.56:3500
-#checkpoint-sync-url: http://185.180.223.56:3500
-#genesis-beacon-api-url: http://185.180.223.56:3500
-#bootstrap-node: enr:
+#relay-node: http://190.2.136.143:3500
+#checkpoint-sync-url: http://190.2.136.143:3500
+genesis-beacon-api-url: http://190.2.136.143:3500
+bootstrap-node: ["enr:-LG4QEHlyTYkSlkMB9yi6rbOYwY6qt0AnccGfQlk0Oy6ceygDrPx2hOYLphMCUU_8H9-Zd05DejNX_S7s4PTnnlkjgyGAYRDUtZrh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBT6ONGAAECAv__________gmlkgnY0gmlwhL4CiI-Jc2VjcDI1NmsxoQMUqWi896Y_5_X-qA2ww3hv0-pObuEm3vMJRw48JQ5gH4N1ZHCCEZQ","enr:-LG4QAmLRPRMEQEMLeFqJUKRx5ZkVGy7_mBsnaqW8X4O_v9Uf4w3C5ptLUdUy7jsNEH0USnN5YoYJoSxWtNwWEcAes2GAYRDRLksh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBT6ONGAAECAv__________gmlkgnY0gmlwhD5wCDWJc2VjcDI1NmsxoQIrdjPHLWQQWjSJ_h-Kx_X-ZFCLfiBW59p0hq78QOTEL4N1ZHCCEZQ","enr:-LG4QGAnVjZrh1l2bRK0fxjzBpm3u--EsKjFFmW58m1bVOASGeeCu_fW8W7AZRWbrhDsX9mf_9tEk-3hpr8YKvaaFvyGAYRDSgkHh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBT6ONGAAECAv__________gmlkgnY0gmlwhF2-jQSJc2VjcDI1NmsxoQMpe-fVYrEJJJKMWXch0GQCvH5JVHAZofITkUDaAJn9AYN1ZHCCEZQ"]
+
 #peer=/ip4/
-peer: ["/ip4/190.2.136.143/tcp/13000/p2p/16Uiu2HAmPkANvBsg4VFrwByVbUq5MWDnwDnZSD9bmJv2STXyxU8n","/ip4/62.112.8.53/tcp/13000/p2p/16Uiu2HAmHNnAy8iX4LXmsfrGM5HZSqsNjgMTFuQMVGPq65VwVMFo","/ip4/93.190.141.4/tcp/13000/p2p/16Uiu2HAmPaRCVxsVGoxXceMk89yvTXy6ekZyYexjYAvFAKVPNR1H"]
+#peer: ["/ip4/190.2.136.143/tcp/13000/p2p/16Uiu2HAmPkANvBsg4VFrwByVbUq5MWDnwDnZSD9bmJv2STXyxU8n","/ip4/62.112.8.53/tcp/13000/p2p/16Uiu2HAmHNnAy8iX4LXmsfrGM5HZSqsNjgMTFuQMVGPq65VwVMFo","/ip4/93.190.141.4/tcp/13000/p2p/16Uiu2HAmPaRCVxsVGoxXceMk89yvTXy6ekZyYexjYAvFAKVPNR1H"]
 
 # Optional tuning parameters
 # For full list, see https://docs.prylabs.network/docs/prysm-usage/parameters

@@ -81,7 +81,7 @@ AuthVirtualHosts = ["*"]
 WSHost = "0.0.0.0"
 WSPort = 8546
 #WSModules = ["net", "web3", "eth"]
-WSModules = ["eth", "net","web3" "engine", "admin"]
+WSModules = ["eth", "net", "web3", "engine", "admin"]
 GraphQLVirtualHosts = ["*"]
 
 [Node.P2P]

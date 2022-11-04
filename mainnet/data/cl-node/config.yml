@@ -34,10 +34,12 @@ monitoring-host: 0.0.0.0
 
 #relay-node: http://185.180.223.56:3500
 #checkpoint-sync-url: http://185.180.223.56:3500
-#genesis-beacon-api-url: http://185.180.223.56:3500
+genesis-beacon-api-url: http://185.180.223.56:3500
 #bootstrap-node: enr:
+bootstrap-node: ["enr:-LG4QD79L6qKNJJc14hftn4hUc8_ezZOGgnaoYueU_a5ViI0e1ANheg8wOpgMqOihGyEvrmbfEtQieedeGsjlU3XNT2GAYRDeXy6h2F0dG5ldHOIAAAAAAAAAACEZXRoMpDAUhMaAAACAv__________gmlkgnY0gmlwhLm03ziJc2VjcDI1NmsxoQPZHFqr_7TyCDWbQlO1BmWC4YTJbVOLfgS1ehz352u3M4N1ZHCCEZQ","enr:-LG4QBFTj6nXzihrpx1PGc0XH6ViIY6ThM17b0Cz_XUwkPBoA7gIUBy5Xjtj2LM_pTW8Inn9rq27aVIszxejFtFoBJaGAYRDfGaCh2F0dG5ldHOIAAAAAAAAAACEZXRoMpDAUhMaAAACAv__________gmlkgnY0gmlwhFkmYyeJc2VjcDI1NmsxoQIIsZq5R7VDVwhgMnBpzwkx8BaObMw4jC_KRkuZQ87HaIN1ZHCCEZQ","enr:-LG4QPKIWY5yFexfv0OcaJcabZG0qskpuJ4PUuKsi44vlV5NKwi2mmT_NrOzS34m9y2h-ackJ0GRii_AZ_8BSdhH4NWGAYRDfq3_h2F0dG5ldHOIAAAAAAAAAACEZXRoMpDAUhMaAAACAv__________gmlkgnY0gmlwhF2-jRGJc2VjcDI1NmsxoQIIsZq5R7VDVwhgMnBpzwkx8BaObMw4jC_KRkuZQ87HaIN1ZHCCEZQ"]
+
 #peer=/ip4/
-peer: ["/ip4/185.180.223.56/tcp/13000/p2p/16Uiu2HAmLgjCSihf4VttpzjJituZyt6QgmQseVEt4p6M9KKmYNac","/ip4/89.38.99.39/tcp/13000/p2p/16Uiu2HAmMrQk3bv3CZHjjxZg8yVpRpVEk3Dk2zeHtiTYvhnAmncx","/ip4/93.190.141.17/tcp/13000/p2p/16Uiu2HAmLKUvtuhfxoLqWJaj9NDBddjxePYbsdQwrBPYwrmvDgaL"]
+#peer: ["/ip4/185.180.223.56/tcp/13000/p2p/16Uiu2HAmLgjCSihf4VttpzjJituZyt6QgmQseVEt4p6M9KKmYNac","/ip4/89.38.99.39/tcp/13000/p2p/16Uiu2HAmMrQk3bv3CZHjjxZg8yVpRpVEk3Dk2zeHtiTYvhnAmncx","/ip4/93.190.141.17/tcp/13000/p2p/16Uiu2HAmLKUvtuhfxoLqWJaj9NDBddjxePYbsdQwrBPYwrmvDgaL"]
 
 # Optional tuning parameters
 # For full list, see https://docs.prylabs.network/docs/prysm-usage/parameters
